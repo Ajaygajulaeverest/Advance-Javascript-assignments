@@ -1,0 +1,21 @@
+{
+  "name": "web-app.unit-test",
+  "version": "0.0.0",
+  "description": "WebApp.UnitTest",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "scripts": {
+    "test": "jest",
+    "run": "npm run build && node build/jackpot.js",
+    "test-cov":"jest --coverage"
+  },
+  "type": "module",
+  "devDependencies": {
+    "jest": "^28.1.1",
+    "@uniswap/sdk": "^3.0.3",
+    "ethers": "^5.7.2"
+   
+  }
+}
