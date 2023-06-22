@@ -20,8 +20,8 @@ function discountbill(value) {
 }
 
 if (flag == 1) {
-  lucareading = lucabill.map(discountbill);
-  lucusreading = lucusbill.map(discountbill);
+  var lucareading = lucabill.map(discountbill);
+  var lucusreading = lucusbill.map(discountbill);
 } else {
   lucareading = lucabill;
   lucusreading = lucusbill;
@@ -48,4 +48,4 @@ console.log("disconted lucsbill", modifiedlucusbill);
 console.log("totallucusbill when electrocharged", totallucusbill);
 
 // module.exports = modified;
-module.exports = {modified,discountbill};
+module.exports = { modified, discountbill };
