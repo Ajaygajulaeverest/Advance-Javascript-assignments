@@ -1,8 +1,4 @@
 
-
-
-
-
 import { writeFileSync } from "fs";
 function fetchingdatausingThen(){
     const start = new Date().getTime();
