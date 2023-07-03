@@ -1,5 +1,3 @@
-
-
 const minSpeedRecoded = require("./carspeed");
 
 describe("test the carspeed code", () => {
