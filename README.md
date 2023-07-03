@@ -4,6 +4,8 @@ Installation:
 
 npm install: To install the packages to do the testing.
 
+node filename.js: used to run the code.
+
 npm run test: to run the testing for the code.
 
 # introduction
