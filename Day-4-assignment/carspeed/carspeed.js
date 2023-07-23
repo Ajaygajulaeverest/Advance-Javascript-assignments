@@ -7,14 +7,14 @@ class Car {
   increaseSpeed() {
     this.speed++;
     this.recordedSpeed.push(this.speed);
-    console.log("recordedspeed increaesd", this.recordedSpeed);
+    return recordedspeed
     // speed up by 1 after 1 second. hint: use setTimeout to execute after 1 second.
   }
    
   decreaseSpeed() {
     this.speed--;
     this.recordedSpeed.push(this.speed);
-    console.log("recordedspeed decreased", this.recordedSpeed);
+    return recordedspeed
     
   }
   averageSpeed() {
@@ -26,12 +26,12 @@ class Car {
   }
   maxSpeedRecoded() {
     const maxspeed = Math.max(...this.recordedSpeed);
-    console.log("maxspeed", maxspeed);
+    return maxspeed
   }
 
   minSpeedRecoded() {
     const minspeed = Math.min(...this.recordedSpeed);
-    console.log("minspeed", minspeed);
+    return minspeed
     //hint: Use Math.min
   }
 
@@ -43,9 +43,9 @@ class Car {
     // return regulator();
   }
 
-  getRecordings() {
-    // return all recordings
-  }
+  // getRecordings() {
+  //   // return all recordings
+  // }
 }
 const car = new Car(45, []);
 car.increaseSpeed();
@@ -55,4 +55,4 @@ car.minSpeedRecoded();
 car.adjustRecordings();
 setTimeout(()=>car.increaseSpeed(), 1000);
 setTimeout(()=>car.decreaseSpeed(), 1000);
-// module.exports = car.minSpeedRecoded ;
+module.exports = car;
