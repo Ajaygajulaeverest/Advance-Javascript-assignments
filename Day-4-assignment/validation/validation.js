@@ -1,6 +1,6 @@
 // import { error } from "console";
 
-const url = "https://everest.engineering/users?id=7&name=ajay";
+const url = "https://everest.engineering/users?id=7&name=naveen";
 const code = {
   autorization: "Bearer QmFzZTY0",
   Xratelimit: 10,
@@ -14,13 +14,18 @@ function validation() {
   let nameid = httpformat.split("&");
   let id = nameid[0].split("=");
   let namestring = nameid[1].split("=");
-  if (regexid.test(id[1]) === true && regexname.test(namestring[1]) === true) {
+  if (regexid.test(id[1]) === true) {
     console.log("id was valid in the url--", nameid[0]);
-    // console.log("name was valid in the url--", nameid[1]);
+
   } else {
-    throw new Error("name or id was invalid");
-    // console.log("name or id was invalid");
+    throw new Error("id was invalid");
   }
+  if (regexname.test(namestring[1]) === true) {
+    console.log("name was valid in the url--", nameid[1]);
+  } else {
+    throw new Error("name was invalid");
+  }
+
   if (inputurl[0] === validhttp) {
     // console.log(validhttp);
   } else {
@@ -47,4 +52,4 @@ function stringvalidator() {
   }
 }
 stringvalidator();
-module.exports = {stringvalidator,validation,atob}  ;
+// module.exports = {stringvalidator,validation,atob}  ;
